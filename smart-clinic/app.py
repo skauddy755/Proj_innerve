@@ -5,6 +5,7 @@ import cv2
 from PIL import Image
 from utils import img2heatmap
 from alzheimer.classification.classification import predict
+from aptos.inference_aptos import predict_aptos
 
 app = Flask(__name__)
 
@@ -54,17 +55,15 @@ def alzheimersdetection():
                 return "NON SUPPORTED FILE TYPE"
     return render_template('alzheimer.html', predicted = False)
 
-@app.route('/services/tuberculosis')
-def tuberculosis():
-    return "<h1>Working On it</h1>"
 
 @app.route('/services/breast')
 def breast():
+
     return "<h1>Working On it</h1>"
 
-@app.route('/services/melanoma')
+@app.route('/services/melanoma', methods=['POST', 'GET'])
 def melanoma():
-    return "<h1>Working On it</h1>"
+    return render_template("melanoma.html", predicted=False )
 
 
 @app.route('/blog')
