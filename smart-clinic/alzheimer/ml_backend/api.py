@@ -19,13 +19,14 @@ def get_arguments():
                         help='Single input file name.')
     parser.add_argument('--dir', required=False,
                         type=str, help='Directory name with input images')
-    parser.add_argument('--ofp', required=False, default="../output_imgs",
+    parser.add_argument('--ofp', required=False, default=os.path.join(os.getcwd(), 'alzheimer/output_imgs'),
                         type=str, help='Single output file path with name.Use this if using "file" flag.')
     parser.add_argument('--odp', required=False
                         , type=str, help='Directory path for output images.Use this if using "dir" flag.')
+    parser.add_argument('--weight', required=False, default=os.path.join(os.getcwd(), 'alzheimer/ml_backend/saved_models/UNet-[16, 32, 64, 128, 256].pt'))
     args = parser.parse_args()
     args = {'file': args.file, 'folder': args.dir,
-            'ofp': args.ofp, 'odp': args.odp}
+            'ofp': args.ofp, 'odp': args.odp, 'weight':args.weight}
     return args
 
 
@@ -33,21 +34,20 @@ class Api:
     def __init__(self):
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    def call(self, file, folder, ofp, odp):
+    def call(self, file, folder, ofp, odp, weight):
         """Method saves the predicted image by taking different parameters."""
         if file != None and folder != None:
             print('"folder" flag and "file" flag cant be used together')
             return
 
-        model = self._load_model()
+        model = self._load_model(weight)
         save_path = None
         # For a single file
         if file != None:
             image = self._get_file(file)
             output = self._get_model_output(image, model)
-
-            _, _, name, extension = file.split('.')
-            name = name[12:]
+            print(file)
+            name, extension = file.split('.')
             save_path = name+'_predicted'+'.'+extension
             if ofp:
                 save_path = os.path.join(ofp,save_path)
@@ -70,13 +70,13 @@ class Api:
                 self._save_image(file, output, save_path)
                 print(f'Output Image Saved At {save_path}')
 
-    def _load_model(self):
+    def _load_model(self, weight_path):
         """Load the saved model and return it."""
         filter_list = [16, 32, 64, 128, 256]
 
         model = DynamicUNet(filter_list).to(self.device)
         classifier = BrainTumorClassifier(model, self.device)
-        model_path = os.path.join('saved_models', 'UNet-[16, 32, 64, 128, 256].pt')
+        model_path = os.path.join(weight_path)
         classifier.restore_model(model_path)
         print(f'Saved model at location "{model_path}" loaded on {self.device}')
         return model
@@ -103,7 +103,7 @@ class Api:
             transforms.Resize((512, 512))
         ])
 
-        image = default_transformation(Image.open(file_name))
+        image = default_transformation(Image.open(os.getcwd()+'/alzheimer/input_imgs/'+file_name))
         return TF.to_tensor(image)
 
 

@@ -49,8 +49,6 @@
                             <li><a href="{{url_for("home")}}">Home</a></li>
                             <li><a href="{{url_for("about")}}">About Us</a></li>
                             <li><a href="{{url_for("service")}}">Services</a></li>
-                            <li><a href="{{url_for("blog")}}">Blog</a></li>
-                            <!-- <li><a href="gallery.html">Gallery</a></li> -->
                             <li><a href="{{url_for("contact")}}">Contact Us</a></li>
                         </ul>
                     </div>
@@ -62,15 +60,15 @@
     </header>
 
 
-      <!--  ************************* Page Title Starts Here ************************** -->
             <div class="page-nav no-margin row">
                 <div class="container">
                     <div class="row">
-                        <h2>{% block thead %}{% endblock thead %}</h2>
+                        <h2>
+                            {% block thead %} {% endblock thead %}
+                        </h2>
                     </div>
                 </div>
             </div>
-        <!-- ######## Page  Title End ####### -->
 
 
 {% block content %}

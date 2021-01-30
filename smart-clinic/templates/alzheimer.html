@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block thead %}Alzheimer{% endblock thead %}
+
+{% block content %} 
+
+<div class="container" style="margin: 10rem">
+    <h1 style="margin: auto; font-weight: 600; text-align: center;">Upload MRI Scan</h1>
+    <div style="width: 85%; margin: auto;">
+        <form action="/services/alzheimer" method="POST" enctype="multipart/form-data">
+            <label class="form-label" for="image">Choose Scanned Image</label>
+            <input type="file" class="form-control" name="image" id="image" />
+            <button type="submit" id="singlebutton" name="singlebutton" class="new-btn-d" style="background-color: grey;margin: auto; padding:0.5rem" type="submit">Upload MRI Scan</button>
+        </form>
+    </div>
+</div>
+
+{% if predicted==True %}
+<div class="container">
+    <div style="margin: auto; padding: 2rem">
+        <img src="data:image/jpeg;base64,{{imgData}}" alt="result" style="width: 60%;">
+        <p style="font-size: 1.5rem;">
+            <span style="font-size: 2rem; font-weight: 600;"> Prediction of Positive Result: </span>{{ supplied_text }}
+        </p>
+    </div>
+</div>
+
+{% endif %}
+
+{% endblock content %}

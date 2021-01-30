@@ -66,7 +66,7 @@ def predict(img_path, weight_path):
     classifier =nn.Linear(in_features, 1)
     model._fc=classifier
 
-    model.load_state_dict(torch.load('classification/saved_weight/current_checkpoint.pt', map_location='cpu'),strict=True)
+    model.load_state_dict(torch.load(weight_path, map_location='cpu'),strict=True)
     model.cpu()
     model.eval()  # switch model to the evaluation mode
     
