@@ -1,95 +1,26 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Smart Clinic</title>
-
-    <link rel="shortcut icon" href="{{url_for('static', filename="images/fav.jpg")}}">
-    <link rel="stylesheet" href="{{url_for('static', filename="css/bootstrap.min.css")}}">
-    <link rel="stylesheet" href="{{url_for('static', filename="css/fontawsom-all.min.css")}}">
-    <link rel="stylesheet" href="{{url_for('static', filename="css/animate.css")}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename="css/style.css")}}" />
-</head>
+{% extends 'base.html' %}
 
 <body>
 
-    <!-- ################# Header Starts Here####################### -->
-    <header>
-        <div class="header-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 col-md-12 left-item">
-                        <ul>
-                            <li><i class="fas fa-envelope-square"></i> sales@smarteyeapps.com</li>
-                            <li><i class="fas fa-phone-square"></i> +123 987 887 765</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-5 d-none d-lg-block right-item">
-                        <ul>
-                            <li><a><i class="fab fa-github"></i></a></li>
-                            <li><a><i class="fab fa-google-plus-g"></i></a></li>
-                            <li> <a><i class="fab fa-pinterest-p"></i></a></li>
-                            <li><a><i class="fab fa-twitter"></i></a></li>
-                            <li> <a><i class="fab fa-facebook-f"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div id="nav-head" class="header-nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-12 nav-img">
-                        <img src="assets/images/logo.jpg" alt="">
-                       <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
-                    </div>
-                    <div id="menu" class="col-md-9 d-none d-md-block nav-item">
-                        <ul>
-                            <li><a href="{{url_for("home")}}">Home</a></li>
-                            <li><a href="{{url_for("about")}}">About Us</a></li>
-                            <li><a href="{{url_for("service")}}">Services</a></li>
-                            <li><a href="{{url_for("blog")}}">Blog</a></li>
-                            <!-- <li><a href="gallery.html">Gallery</a></li> -->
-                            <li><a href="{{url_for("contact")}}">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </header>
+{%block content%}
 
 
     
-    <!-- ################# Our Team Starts Here#######################--->
-
-      <!--  ************************* Page Title Starts Here ************************** -->
-            <div class="page-nav no-margin row">
-                <div class="container">
-                    <div class="row">
-                        <h2>Contact Us</h2>
-                    </div>
-                </div>
-            </div>       
-        <!-- ######## Page  Title End ####### -->
-    
+    <!-- ################# Our Team Starts Here#######################-->
+{% block thead %}Contact Us{% endblock thead %} 
 
     <div style="margin-top:0px;" class="row no-margin">
         
         <iframe style="width:100%" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d249759.19784092825!2d79.10145254589841!3d12.009924873581818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1448883859107"  height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 
-      </div>
+    </div>
 
-      <div class="row contact-rooo no-margin">
+    <div class="row contact-rooo no-margin">
         <div class="container">
-           <div class="row">
-               
-          
+        <div class="row">
+            
+        
             <div style="padding:20px" class="col-sm-6">
             <h2 style="font-size:18px">Contact Form</h2>
                 <div class="row">
@@ -100,32 +31,28 @@
                     <div style="padding-top:10px;" class="col-sm-3"><label>Email Address </label></div>
                     <div class="col-sm-8"><input type="text" name="name" placeholder="Enter Email Address" class="form-control input-sm"  ></div>
                 </div>
-                 <div style="margin-top:10px;" class="row">
+                <div style="margin-top:10px;" class="row">
                     <div style="padding-top:10px;" class="col-sm-3"><label>Mobile Number</label></div>
                     <div class="col-sm-8"><input type="text" name="name" placeholder="Enter Mobile Number" class="form-control input-sm"  ></div>
                 </div>
-                 <div style="margin-top:10px;" class="row">
+                <div style="margin-top:10px;" class="row">
                     <div style="padding-top:10px;" class="col-sm-3"><label>Enter Message</label></div>
                     <div class="col-sm-8">
-                      <textarea rows="5" placeholder="Enter Your Message" class="form-control input-sm"></textarea>
+                    <textarea rows="5" placeholder="Enter Your Message" class="form-control input-sm"></textarea>
                     </div>
                 </div>
-                 <div style="margin-top:10px;" class="row">
+                <div style="margin-top:10px;" class="row">
                     <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
                     <div class="col-sm-8">
-                     <button class="btn btn-danger btn-sm">Send Message</button>
+                    <button class="btn btn-danger btn-sm">Send Message</button>
                     </div>
                 </div>
             </div>
-             <div class="col-sm-6">
+            <div class="col-sm-6">
                     
-                  <div style="margin:50px" class="serv"> 
+                <div style="margin:50px" class="serv"> 
                 
-               
-             
-                              
-              
-          <h2 style="margin-top:10px;">Address</h2>
+        <h2 style="margin-top:10px;">Address</h2>
 
     Still Unknown<br>
     <br>
@@ -133,59 +60,17 @@
     Email:info@smart-eye.in<br>
     Website:www.xyz.com<br>
 
- 
-       
-            
+        </div>    
                 
-                
-              
-           </div>    
-                
-             
-         </div>
+        </div>
 
             </div>
         </div>
         
-      </div>
-
-    
-
-   
-    <!-- ################# Footer Starts Here####################### -->
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-12">
-                    <h2>About Us</h2>
-                </div>
-                <div class="col-md-4 col-sm-12 map-img">
-                    <h2>Contact Us</h2>
-                    <address class="md-margin-bottom-40">
-                        BlueDart <br>
-                        Marthandam (K.K District) <br>
-                        Tamil Nadu, IND <br>
-                        Phone: +91 9159669599 <br>
-                        Email: <a href="mailto:info@anybiz.com" class="">info@bluedart.in</a><br>
-                        Web: <a href="smart-eye.html" class="">www.bluedart.in</a>
-                    </address>
-
-                </div>
-            </div>
-        </div>
-        
-
-    </footer>
+    </div>   
+{% endblock %}
 
 </body>
-<script src="{{url_for('static', filename="js/jquery-3.2.1.min.js")}}"></script>
-<script src="{{url_for('static', filename="js/popper.min.js")}}"></script>
-<script src="{{url_for('static', filename="js/bootstrap.min.js")}}"></script>
-<script src="{{url_for('static', filename="plugins/scroll-fixed/jquery-scrolltofixed-min.js")}}"></script>
-<script src="{{url_for('static', filename="js/script.js")}}"></script>
-
 
 
 </html>

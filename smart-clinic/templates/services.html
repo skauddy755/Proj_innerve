@@ -1,84 +1,14 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Smart CLinic</title>
-
-    <link rel="shortcut icon" href="{{url_for('static', filename="images/fav.jpg")}}">
-    <link rel="stylesheet" href="{{url_for('static', filename="css/bootstrap.min.css")}}">
-    <link rel="stylesheet" href="{{url_for('static', filename="css/fontawsom-all.min.css")}}">
-    <link rel="stylesheet" href="{{url_for('static', filename="css/animate.css")}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename="css/style.css")}}" />
-</head>
+{% extends 'base.html' %}
 
 <body>
 
-    <!-- ################# Header Starts Here####################### -->
-    <header>
-        <div class="header-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 col-md-12 left-item">
-                        <ul>
-                            <li><i class="fas fa-envelope-square"></i> sales@smarteyeapps.com</li>
-                            <li><i class="fas fa-phone-square"></i> +123 987 887 765</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-5 d-none d-lg-block right-item">
-                        <ul>
-                            <li><a><i class="fab fa-github"></i></a></li>
-                            <li><a><i class="fab fa-google-plus-g"></i></a></li>
-                            <li> <a><i class="fab fa-pinterest-p"></i></a></li>
-                            <li><a><i class="fab fa-twitter"></i></a></li>
-                            <li> <a><i class="fab fa-facebook-f"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-        <div id="nav-head" class="header-nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-12 nav-img">
-                        <img src="assets/images/logo.jpg" alt="">
-                       <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
-                    </div>
-                    <div id="menu" class="col-md-9 d-none d-md-block nav-item">
-                        <ul>
-                            <li><a href="{{url_for("home")}}">Home</a></li>
-                            <li><a href="{{url_for("about")}}">About Us</a></li>
-                            <li><a href="{{url_for("service")}}">Services</a></li>
-                            <li><a href="{{url_for("blog")}}">Blog</a></li>
-                            <!-- <li><a href="gallery.html">Gallery</a></li> -->
-                            <li><a href="{{url_for("contact")}}">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </header>
-
+{% block content %}
 
     
     <!-- ################# Our Team Starts Here####################### -->
 
-      <!--  ************************* Page Title Starts Here ************************** -->
-            <div class="page-nav no-margin row">
-                <div class="container">
-                    <div class="row">
-                        <h2>Services</h2>
-                    </div>
-                </div>
-            </div>
-        <!-- ######## Page  Title End ####### -->
-    
-
-
+{% block thead %}Services{% endblock thead %}
 <section class="key-features kf-2">
         <div class="container">
             <div class="inner-title">
@@ -88,55 +18,53 @@
             </div>
 
             <div class="row">
-                <div class="col-md-4 col-sm-6">
+                <a href="{{url_for('tuberculosis')}}"  class="col-md-4 col-sm-6"><div>
                     <div class="single-key">
                         <i class="fas fa-hospital-alt"></i>
                         <h5>Newest Technologies</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
                     </div>
-                </div>
+                    </div></a>
 
-                <div class="col-md-4 col-sm-6">
+                <a href=""  class="col-md-4 col-sm-6"><div>
                     <div class="single-key">
                         <i class="fas fa-user-md"></i>
                         <h5>Experianced Doctors</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
                     </div>
-                </div>
+                </div></a>
 
-                <div class="col-md-4 col-sm-6">
+                <a href=""  class="col-md-4 col-sm-6"><div>
                     <div class="single-key">
                         <i class="fas fa-briefcase-medical"></i>
                         <h5>High Customer Satisfaction</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
                     </div>
-                </div>
+                </div></a>
 
-                <div class="col-md-4 col-sm-6">
+                <a href="" class="col-md-4 col-sm-6"><div >
                     <div class="single-key">
                         <i class="fas fa-capsules"></i>
                         <h5>Pharma Pipeline</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
                     </div>
-                </div>
+                </div></a>
 
-                <div class="col-md-4 col-sm-6">
+                <a href="" class="col-md-4 col-sm-6"><div>
                     <div class="single-key">
                         <i class="fas fa-prescription-bottle-alt"></i>
                         <h5>Pharma Team</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
                     </div>
-                </div>
+                </div></a>
 
-
-
-                <div class="col-md-4 col-sm-6">
+                <a href="" class="col-md-4 col-sm-6"><div>
                     <div class="single-key">
                         <i class="far fa-thumbs-up"></i>
                         <h5>High Quality treatments</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut erat nec leo lobortis blandit.</p>
                     </div>
-                </div>
+                </div></a>
             </div>
 
 
@@ -148,43 +76,11 @@
 
     </section>
 
-   
-   
-    <!-- ################# Footer Starts Here####################### -->
+{% endblock content %}
 
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-12">
-                    <h2>About Us</h2>
-                </div>
-                <div class="col-md-4 col-sm-12 map-img">
-                    <h2>Contact Us</h2>
-                    <address class="md-margin-bottom-40">
-                        BlueDart <br>
-                        Marthandam (K.K District) <br>
-                        Tamil Nadu, IND <br>
-                        Phone: +91 9159669599 <br>
-                        Email: <a href="mailto:info@anybiz.com" class="">info@bluedart.in</a><br>
-                        Web: <a href="smart-eye.html" class="">www.bluedart.in</a>
-                    </address>
-
-                </div>
-            </div>
-        </div>
-        
-
-    </footer>
 
 
 </body>
-
-<script src="assets/js/jquery-3.2.1.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
-<script src="assets/js/script.js"></script>
 
 
 </html>
