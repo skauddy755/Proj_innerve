@@ -3,11 +3,12 @@ import albumentations as aug
 from efficientnet_pytorch import EfficientNet
 import numpy as np
 import torch
+import os
 
+weights_path = os.getcwd()+"/pneumonia/weights/"
 
 pneumonia= ['Normal', 'Pneumonia']
 def predict_pneumonia(file,weights,labs=pneumonia):
-
       model=torch.load(weights)
       model.cpu()
       model.eval()

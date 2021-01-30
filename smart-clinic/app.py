@@ -8,7 +8,7 @@ from alzheimer.classification.classification import predict
 from aptos.inference_aptos import predict_aptos
 from melanoma.inference_melanoma import predict_melanoma
 from pneumonia.inference_pneumonia import predict_pneumonia
-from breast_cancer.inference_breast import predict_breast
+from breast_cancer.inference_brest import predict_breast
 
 app = Flask(__name__)
 
@@ -128,13 +128,8 @@ def aptos():
                 return render_template('aptos.html', predicted=True, supplied_text = result)
     return render_template('aptos.html', predicted = False)
 
-@app.route('/blog')
-def blog():
-    return render_template('blog.html')
-
-
-# @app.route('/<link>')
-# def e404():
-#     r
+@app.route('/<link>')
+def page_not_found(link):
+    return render_template('404.html')
 
 app.run(debug=True)

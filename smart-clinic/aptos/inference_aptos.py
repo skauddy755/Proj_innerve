@@ -3,7 +3,7 @@ import albumentations as aug
 from efficientnet_pytorch import EfficientNet
 import numpy as np
 import torch
-
+import os
 
 aptos= ['No Diabetic Retinopathy',
     'Mild Diabetic Retinopathy',
@@ -11,8 +11,9 @@ aptos= ['No Diabetic Retinopathy',
     'Severe Diabetic Retinopathy',
     'Proliferative Diabetic Retinopathy']
 
+weights_path = os.getcwd()+"/aptos/weights/"
 
-def predict_aptos(file,weights,labs=aptos):
+def predict_aptos(file,weights = weights_path,labs=aptos):
 	model=torch.load(weights)
 	model.cpu()
 	model.eval()
