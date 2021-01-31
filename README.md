@@ -1,6 +1,8 @@
 # T34-error_404
 Official Repository for DotSlash 4.0 Submission of Team 34: error_404
 
+![Video](./demo.gif)
+
 [Demo Video Link](https://drive.google.com/file/d/1TFp36TigWX6VSAtSi6eEwCvS2OuTYwUR/view)
 
 
