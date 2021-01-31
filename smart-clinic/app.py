@@ -12,7 +12,7 @@ from breast_cancer.inference_brest import predict_breast
 
 app = Flask(__name__)
 
-app.config["PNEUMONIA_IMAGE_UPLOADS"] = os.getcwd()+"/pneumonia/input_imgs"
+app.config["PNEUMONIA_UPLOADS"] = os.getcwd()+"/pneumonia/input_imgs"
 app.config["BREAST_CANCER_UPLOADS"] = os.getcwd()+"/breast_cancer/input_imgs"
 app.config["MELANOMA_UPLOADS"] = os.getcwd()+"/melanoma/input_img"
 app.config["APTOS_UPLOADS"] = os.getcwd()+"/aptos/input_imgs"
@@ -109,7 +109,7 @@ def pneumonia():
             if ext.upper() in app.config["ALLOWED_IMAGE_EXTENSIONS"]:
                 image.save(os.path.join(app.config["PNEUMONIA_UPLOADS"], filename))
                 result = predict_pneumonia(os.path.join(app.config["PNEUMONIA_UPLOADS"], filename))
-                return render_template('pneunomia.html', predicted=True, supplied_text = result)
+                return render_template('pneumonia.html', predicted=True, supplied_text = result)
     return render_template('pneumonia.html', predicted=False)
 
 @app.route('/services/aptos', methods=['POST', 'GET'])

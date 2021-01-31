@@ -5,10 +5,10 @@ import numpy as np
 import torch
 import os
 
-weights_path = os.getcwd()+"/pneumonia/weights/"
+weights_path = os.getcwd()+"/pneumonia/weights/Pneumonia.pth"
 
 pneumonia= ['Normal', 'Pneumonia']
-def predict_pneumonia(file,weights,labs=pneumonia):
+def predict_pneumonia(file,weights=weights_path,labs=pneumonia):
       model=torch.load(weights)
       model.cpu()
       model.eval()
