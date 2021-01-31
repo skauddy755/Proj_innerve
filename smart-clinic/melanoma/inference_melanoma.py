@@ -15,7 +15,7 @@ skincancer= ['Melanoma (Malignant)',
 	'Vascular Lesion (maybe Benign maybe Malignant)',
 	'Squamous Cell Carcinoma (Malignant)']
 
-weights_path = os.getcwd()+"/melanoma/weights/"
+weights_path = os.getcwd()+"/melanoma/checkpoints/melanoma.pth"
 
 
 def predict_melanoma(file, weights =weights_path, labs=skincancer):

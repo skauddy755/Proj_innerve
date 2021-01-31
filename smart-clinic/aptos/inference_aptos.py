@@ -11,7 +11,7 @@ aptos= ['No Diabetic Retinopathy',
     'Severe Diabetic Retinopathy',
     'Proliferative Diabetic Retinopathy']
 
-weights_path = os.getcwd()+"/aptos/weights/"
+weights_path = os.getcwd()+"/aptos/weights/Aptos.pth"
 
 def predict_aptos(file,weights = weights_path,labs=aptos):
 	model=torch.load(weights)
