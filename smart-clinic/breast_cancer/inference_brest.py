@@ -6,7 +6,7 @@ import torch
 import os
 
 breast= ['Benign', 'Malignant', 'NormalB']
-weight_path = os.getcwd()+"/breast_cancer/weights/"
+weight_path = os.getcwd()+"/breast_cancer/weights/BreastCancer.pth"
 
 def predict_breast(file,weights=weight_path,labs=breast):
       model=torch.load(weights)
