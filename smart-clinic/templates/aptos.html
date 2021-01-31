@@ -20,7 +20,11 @@
 <div class="container">
     <div style="margin: auto; padding: 2rem">
         <p style="font-size: 1.5rem;">
-            <span style="font-size: 2rem; font-weight: 600;"> Prediction of Positive Result: </span>{{ supplied_text }}
+            <span style="font-size: 2rem; font-weight: 600;"> Result: </span>
+            {% for data in supplied_text %}
+                <br>
+                <li><h5>{{data}} : {{supplied_text[data]}}</h5> </li>
+            {% endfor %}
         </p>
     </div>
 </div>
