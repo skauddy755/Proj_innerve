@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="{{url_for('static', filename="css/fontawsom-all.min.css")}}">
     <link rel="stylesheet" href="{{url_for('static', filename="css/animate.css")}}">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename="css/style.css")}}"/>
+
+    <style>
+        .social-links{
+            margin: 3px 4px;
+        }
+    </style>
 </head>
 
 <body>
@@ -179,24 +185,39 @@
         <div class="container">
             <div class="inner-title">
                 <h2>Meet our Team</h2>
-                <p>Take a look at our innovative and experiance team</p>
+                <p>Have a look at our innovative team</p>
             </div>
             <div class="row team-member">
+                
                 <div class="col-md-3 col-sm-6">
                     <div class="user-card">
                         <div class="userar">
-                            <img class="teammempic" alt=""  src="{{url_for('static', filename="images/team/team0.jpg")}}">
+                            <img class="teammempic" alt="" src="{{url_for('static', filename="images/team/team2.jpg")}}">
                         </div>
                         <div class="detfs">
-                            <p>Chetan Pandey</p>
-                            <ul>
-                                <li><a href="https://www.facebook.com/chetan.pandey.1656854"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
-                                <li><a href="https://github.com/chetanpandey1266"><i class="fab fa-github fa-lg"></i></a></li>
-                            </ul>
-                            <br>
-                            <p >Student at Indian Institute of Technology(ISM) Dhanbad</p>
-
+                            <p class="lead">Prakrit Raj</p>
+                            <div>
+                                <a class="social-links" href="https://github.com/rajprakrit"><i class="fab fa-github fa-lg"></i></a>
+                                <a class="social-links" href="https://www.facebook.com/prakrit.raj.3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a class="social-links" href="https://www.linkedin.com/in/prakrit-raj-b771541a4/"><i class="fab fa-linkedin fa-lg"></i></a>
+                            </div>
+                            <p>Computer Science and Engineering Student at Indian Institute of Technology (ISM) Dhanbad</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="user-card">
+                        <div class="userar">
+                            <img class="teammempic" alt="" src="{{url_for('static', filename="images/team/team0.jpg")}}">
+                        </div>
+                        <div class="detfs">
+                            <p class="lead">Chetan Pandey</p>
+                            <div>
+                                <a class="social-links" href=https://github.com/chetanpandey1266"><i class="fab fa-github fa-lg"></i></a>
+                                <a class="social-links" href="https://www.facebook.com/chetan.pandey.1656854"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a class="social-links" href="https://www.linkedin.com/in/chetan0/"><i class="fab fa-linkedin fa-lg"></i></a>
+                            </div>
+                            <p>Electronics and Communication Engineering Student at Indian Institute of Technology (ISM) Dhanbad</p>
                         </div>
                     </div>
                 </div>
@@ -206,16 +227,13 @@
                             <img class="teammempic" alt="" src="{{url_for('static', filename="images/team/team2.jpg")}}">
                         </div>
                         <div class="detfs">
-                            <p>Prakrit Raj</p>
-                            <ul style="text-align:center">
-                                <li><a href="https://www.facebook.com/prakrit.raj.3"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-                                <li><a href="https://github.com/rajprakrit"><i class="fab fa-github fa-lg"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
-                            </ul>
-                            <br>
-                            <p >Student at Indian Institute of Technology(ISM) Dhanbad</p>
-
-
+                            <p class="lead">Sandeep Kumar Auddy</p>
+                            <div>
+                                <a class="social-links" href="https://github.com/SandeepKumarAuddy"><i class="fab fa-github fa-lg"></i></a>
+                                <a class="social-links" href="https://www.facebook.com/sandeep.auddy.16/"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a class="social-links" href="https://www.linkedin.com/in/sandeep-auddy-8482221a4/"><i class="fab fa-linkedin fa-lg"></i></a>
+                            </div>
+                            <p>Electronics and Communication Engineering Student at Indian Institute of Technology (ISM) Dhanbad</p>
                         </div>
                     </div>
                 </div>
@@ -225,19 +243,15 @@
                             <img class="teammempic" alt="" src="{{url_for('static', filename="images/team/team3.jpg")}}">
                         </div>
                         <div class="detfs">
-                            <p>Saksham Agarwal</i></p>
-                            <ul style="text-align:center">
-                                <li><a href="https://www.facebook.com/saksham.aggarwal20"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
-                                <li><a href="https://github.com/saksham20aggarwal"><i class="fab fa-github fa-lg"></i></a></li>
-                            </ul>
-                              <br>   
-                            <p >Student at Indian Institute of Technology(ISM) Dhanbad</p>
-
-
+                            <p class="lead">Saksham Aggarwal</p>
+                            <div>
+                                <a class="social-links" href="https://github.com/saksham20aggarwal"><i class="fab fa-github fa-lg"></i></a>
+                                <a class="social-links" href="https://www.facebook.com/saksham.aggarwal20"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a class="social-links" href="https://www.linkedin.com/in/saksham-aggarwal-14a854192/"><i class="fab fa-linkedin fa-lg"></i></a>
+                            </div>
+                            <p>Mathematics and Computing Student at Indian Institute of Technology (ISM) Dhanbad</p>
                         </div>
                     </div>
-
                 </div>
                 
             </div>
